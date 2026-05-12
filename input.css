@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  /* We assign intuitive names to your hex codes */
+  --color-primary: #1a3636; /* Darkest Green - Backgrounds */
+  --color-secondary: #40534c; /* Dark Green - Cards & Inputs */
+  --color-tertiary: #677d6a; /* Mid Green - Borders & Hover states */
+  --color-accent: #d6bd98; /* Beige - Text & Highlight Buttons */
+}

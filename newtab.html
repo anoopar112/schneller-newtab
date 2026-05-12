@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Tab</title>
+    <link href="./output.css" rel="stylesheet" />
+    <script defer src="./app.js"></script>
+    <script defer src="./alpine.min.js"></script>
+  </head>
+
+  <body
+    x-data="newTabApp"
+    :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
+    class="bg-cover bg-center bg-no-repeat bg-primary/60 bg-blend-overlay flex items-center justify-center min-h-screen font-sans"
+  >
+    <div class="flex flex-row w-full h-screen">
+      <div class="flex flex-row basis-10/12">
+        <div data-include="./components/datetime.html"></div>
+        <div data-include="./components/dashboard.html"></div>
+        <div data-include="./components/fab.html"></div>
+        <div data-include="./components/modals.html"></div>
+      </div>
+      <div class="flex flex-col basis-2/12 bg-secondary/20"></div>
+    </div>
+  </body>
+</html>

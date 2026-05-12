@@ -1,0 +1,40 @@
+<div class="w-full p-8 bg-transparent">
+  <div class="flex flex-col bg-black/10 p-2">
+    <template x-for="group in groups" :key="group.groupName">
+      <div class="mb-2">
+        <div
+          class="flex items-center justify-between mb-4 border-b border-tertiary/30 pb-2"
+        >
+          <h2
+            class="text-lg font-medium text-accent/90 tracking-wide"
+            x-text="group.groupName"
+          ></h2>
+
+          <span
+            class="text-xs font-mono text-accent/70 bg-secondary/30 px-2 py-1 rounded-md border border-tertiary/40"
+            x-text="group.links.length + ' links'"
+          >
+          </span>
+        </div>
+
+        <div class="grid grid-cols-4 md:grid-cols-12 gap-2">
+          <template x-for="link in group.links" :key="link.name">
+            <a
+              :href="link.url"
+              :class="link.style"
+              class="flex items-center gap-2 p-2 bg-secondary/30 backdrop-blur-md rounded-sm transition-all duration-200 border group hover:border-accent/40 hover:-translate-y-0.5 shadow-lg"
+            >
+              <img
+                :src="link.iconUrl"
+                class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity duration-200"
+                alt="icon"
+              />
+
+              <span x-text="link.name" class="font-medium text-sm"></span>
+            </a>
+          </template>
+        </div>
+      </div>
+    </template>
+  </div>
+</div>
