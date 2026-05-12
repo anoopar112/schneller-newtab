@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "My Tailwind New Tab",
+  "name": "Schneller New Tab Page",
   "version": "1.0",
   "description": "Overrides the default new tab with a custom page.",
   "chrome_url_overrides": {
